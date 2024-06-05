@@ -52,8 +52,8 @@ const Welcome = () => {
           >
             <Offcanvas.Body className="d-flex flex-column p-lg-2">
               <div className="text-center">
-                <i className="bi bi-envelope-at-fill text-danger fs-1"></i>
-                <p className="ps-2 fs-4 fw-bold text-info">Mail Box Client</p>
+                <i className="bi bi-envelope-at-fill text-primary fs-1"></i>
+                <p className="ps-2 fs-4 fw-bold text-light"> Mail Box </p>
               </div>
               <div className="text-start mt-5">
                 <ButtonGroup className="d-flex h-100 text-light flex-column">
@@ -66,17 +66,16 @@ const Welcome = () => {
                       onClick={onClickHandler}
                     >
                       <div className="d-flex">
-                        <span>
-                          <i className="fs-4 pe-2 text-info bi bi-envelope-fill"></i>{" "}
-                          Inbox
-                        </span>
-                        <span className="pt-3 position-relative mx-auto">
-                          unread
-                          <span className="p-0 position-absolute top-0 end-0 text-warning">
-                            {unread}
-                          </span>{" "}
-                        </span>
-                      </div>{" "}
+  <span>
+    <i className="fs-4 pe-2 text bi bi-envelope-fill"></i> Inbox
+  </span>
+  <div className="bg-white rounded-circle d-flex justify-content-center align-items-center" style={{ width: "20px", height: "20px" }}>
+    <span className="text-dark">
+      {unread}
+    </span>
+  </div>
+</div>
+
                     </ToggleButton>
                   </NavLink>
                   <NavLink to="/welcome/sent" activeClassName={"bg-success"}>
@@ -87,7 +86,7 @@ const Welcome = () => {
                       className="py-2 w-100 rounded-0 text-start border-0 text-light"
                       onClick={onClickHandler}
                     >
-                      <i className="fs-4 pe-2 text-info bi bi-send-check-fill"></i>{" "}
+                      <i className="fs-4 pe-2 text bi bi-send-check-fill"></i>{" "}
                       Sent
                     </ToggleButton>
                   </NavLink>
@@ -102,7 +101,7 @@ const Welcome = () => {
                       className="py-2 w-100 border-0 rounded-0 text-start text-light"
                       onClick={onClickHandler}
                     >
-                      <i className="fs-4 pe-2 text-info bi bi-pencil-fill"></i>{" "}
+                      <i className="fs-4 pe-2 text- bi bi-pencil-fill"></i>{" "}
                       Compose
                     </ToggleButton>
                   </NavLink>
@@ -114,7 +113,7 @@ const Welcome = () => {
                       className="rounded-0 w-100 text-start py-2 border-0 text-light"
                       onClick={onClickHandler}
                     >
-                      <i className="fs-4 pe-2 text-info bi bi-trash3"></i> Trash
+                      <i className="fs-4 pe-2 text bi bi-trash3"></i> Trash
                     </ToggleButton>
                   </NavLink>
                   <NavLink to="/welcome/starred" activeClassName={"bg-success"}>
@@ -125,7 +124,7 @@ const Welcome = () => {
                       className="rounded-0 w-100 text-start py-2 border-0 text-light"
                       onClick={onClickHandler}
                     >
-                      <i className="bi fs-4 pe-2 text-info bi-star-fill"></i>{" "}
+                      <i className="bi fs-4 pe-2 text- bi-star-fill"></i>{" "}
                       Starred
                     </ToggleButton>
                   </NavLink>

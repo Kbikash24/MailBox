@@ -43,8 +43,8 @@ const MailboxEditor = () => {
     if (emailInfo.recipient !== emailInfo.sender) {
       try {
         const url1 =
-          "https://react-mailbox-client-4f470-default-rtdb.firebaseio.com/emails.json";
-        const url2 = `https://react-mailbox-client-4f470-default-rtdb.firebaseio.com/sent-emails/${email}.json`;
+          "https://mailbox-6e7cd-default-rtdb.firebaseio.com/emails.json";
+        const url2 = `https://mailbox-6e7cd-default-rtdb.firebaseio.com/sent-emails/${email}.json`;
 
         const requests = [
           axios.post(url1, emailInfo),

@@ -85,12 +85,11 @@ const SignUp = () => {
     }
   };
 
-  const testUserHandler = () => {};
 
   return (
     <>
-      <Container fluid>
-        <Row className="justify-content-center min-vh-100 align-items-center">
+      <Container fluid className="">
+        <Row className="justify-content-center min-vh-100 align-items-center ">
           {message && (
             <div className="fixed-top p-0">
               {" "}
@@ -101,19 +100,19 @@ const SignUp = () => {
             <div className="text-center pb-4">
               <h3>
                 Welcome to{" "}
-                <span className="text-danger fst-italic">Mail Box Client </span>
+                <span className="text-primary ">Mail Box </span>
               </h3>
               <p>Please Sign Up/Login to continue.</p>
             </div>
             <div
               style={{ maxWidth: "25rem" }}
-              className="text-center bg-danger bg-gradient mx-auto rounded-top py-1"
+              className="text-center bg-primary bg-gradient mx-auto rounded-top py-1"
             >
               <i className="bi bi-envelope-at-fill fs-1 text-light"></i>
             </div>
             <Form
               onSubmit={onSubmitHandler}
-              className="p-4 shadow-lg mx-auto "
+              className="p-4 shadow-lg mx-auto bg-light"
               style={{ maxWidth: "25rem" }}
             >
               <FloatingLabel
@@ -182,7 +181,7 @@ const SignUp = () => {
                 {signIn ? (
                   <Button
                     type="submit"
-                    className={`w-100 mt-2 bg-danger ${
+                    className={`w-100 mt-2 bg-primary ${
                       isLoading ? "bg-gradient" : ""
                     }  rounded-0 border-0 text-light fw-bold`}
                   >
@@ -191,7 +190,7 @@ const SignUp = () => {
                 ) : (
                   <Button
                     type="submit"
-                    className={`w-100 mt-2 bg-danger ${
+                    className={`w-100 mt-2 bg-primary ${
                       isLoading ? "bg-gradient" : " "
                     }  rounded-0 border-0 text-light fw-bold`}
                   >

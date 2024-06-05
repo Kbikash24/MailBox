@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setRead } from "../../store/mailSlice";
 import { useState } from "react";
 import { toggleStarred } from "../../store/mailSlice";
-import useAxiosFetch from "../../hooks/useAxiosFetch.";
+import useAxiosFetch from "../../hooks/useAxiosFetch";
 const MailListItems = (props) => {
   const { mail } = props;
   const email = useSelector((state) => state.auth.email);
@@ -36,8 +36,8 @@ const MailListItems = (props) => {
 
   const url =
     mail.sender === email
-      ? `https://react-mailbox-client-4f470-default-rtdb.firebaseio.com/sent-emails/${senderMail}/${mail.id}.json`
-      : `https://react-mailbox-client-4f470-default-rtdb.firebaseio.com/emails/${mail.id}.json`;
+      ? `https://mailbox-6e7cd-default-rtdb.firebaseio.com/sent-emails/${senderMail}/${mail.id}.json`
+      : `https://mailbox-6e7cd-default-rtdb.firebaseio.com/emails/${mail.id}.json`;
 
   const starClickHandler = (event) => {
     event.stopPropagation();

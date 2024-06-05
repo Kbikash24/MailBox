@@ -4,7 +4,7 @@ import Welcome from "./Pages/Welcome";
 import { useSelector, useDispatch } from "react-redux";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { addToInbox, clearInbox } from "./store/mailSlice";
-import useAxiosFetch from "./hooks/useAxiosFetch.";
+import useAxiosFetch from "./hooks/useAxiosFetch";
 
 function App() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -15,8 +15,8 @@ function App() {
   const mails = useSelector((state) => state.mail.mails);
   const dispatch = useDispatch();
   const url1 =
-    "https://react-mailbox-client-4f470-default-rtdb.firebaseio.com/emails.json";
-  const url2 = `https://react-mailbox-client-4f470-default-rtdb.firebaseio.com/sent-emails/${email}.json`;
+    "https://mailbox-6e7cd-default-rtdb.firebaseio.com/emails.json";
+  const url2 = `https://mailbox-6e7cd-default-rtdb.firebaseio.com/sent-emails/${email}.json`;
 
   const urls = [url1, url2];
 

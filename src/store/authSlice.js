@@ -4,7 +4,7 @@ const initialAuthState = {
   isAuthenticated: localStorage.getItem("isAuthenticated"),
   idToken: localStorage.getItem("idToken"),
   email: localStorage.getItem("email"),
-  apiKey: "AIzaSyCTp8pkXEAWgMEB8hyekaBfwqyRll1HtdE",
+  apiKey: "AIzaSyCfG99JYJryY8Gs1vV6sCdPTlo-scjLn08",
   isLoading: false,
   notification: {
     message: null,

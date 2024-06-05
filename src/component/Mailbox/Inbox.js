@@ -25,7 +25,7 @@ const Inbox = () => {
         .filter((mail) => mail.isChecked)
         .map((mail) =>
           axios.put(
-            `https://react-mailbox-client-4f470-default-rtdb.firebaseio.com/emails/${mail.id}.json`,
+            `https://mailbox-6e7cd-default-rtdb.firebaseio.com/emails/${mail.id}.json`,
             {
               ...mail,
               isChecked: false,

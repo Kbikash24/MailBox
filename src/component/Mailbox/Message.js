@@ -4,7 +4,7 @@ import { Container, Button } from "react-bootstrap";
 import LoadingSpinner from "../UI/LoadingSpinner";
 import { moveToTrash, deleteForever } from "../../store/mailSlice";
 import { showNotification } from "../../store/authSlice";
-import useAxiosFetch from "../../hooks/useAxiosFetch.";
+import useAxiosFetch from "../../hooks/useAxiosFetch";
 const Message = () => {
   const { messageId } = useParams();
   const location = useLocation();
@@ -19,8 +19,8 @@ const Message = () => {
   if (mails.length > 0) {
     url =
       mail.sender === email
-        ? `https://react-mailbox-client-4f470-default-rtdb.firebaseio.com/sent-emails/${senderMail}/${mail.id}.json`
-        : `https://react-mailbox-client-4f470-default-rtdb.firebaseio.com/emails/${mail.id}.json`;
+        ? `https://mailbox-6e7cd-default-rtdb.firebaseio.com/sent-emails/${senderMail}/${mail.id}.json`
+        : `https://mailbox-6e7cd-default-rtdb.firebaseio.com/emails/${mail.id}.json`;
   }
 
   const moveToTrashHandler = () => {
